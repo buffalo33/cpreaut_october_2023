@@ -5,7 +5,7 @@ RUN apt-get update -y
 RUN apt-get install sudo -y
 COPY requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install -r /tmp/requirements.txt
-RUN python3 -m pip uninstall transformer_engine
+RUN python3 -m pip uninstall transformer_engine -y
 
 ARG UNAME=user
 ARG UID=1000
