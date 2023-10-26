@@ -324,9 +324,6 @@ def outliers_idx(y):
   tot = props.transpose(0,1).squeeze().sum()
   mean = tot / props.shape[0]
 
-  # FOR TESTING !!!
-  mean = 79
-
   # Target over occurent indexes.
   for i in range(props.shape[0]):
     if props[i,0] > mean:
